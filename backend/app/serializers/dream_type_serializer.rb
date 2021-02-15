@@ -1,4 +1,5 @@
 class DreamTypeSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :dream_type
+  belongs_to :dream
 end

@@ -6,8 +6,11 @@ class DreamsController < ApplicationController
 
     def show
         dream = Dream.find_by(id: params[:id])
+        options = {
+            include: [:dream_types, :dream_dates]
+        }
         if dream
-            render json: dream, include: [:dream_dates, :dream_types]
+            render json: DreamSerializer.new(dream, options)
         else
             render json: { message: 'dream not found' }
         end
