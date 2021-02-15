@@ -8,6 +8,6 @@
 
 Dream.create(title: "Maple Panic", description: "weird")
 
-DreamDate.create(date: 11/5/2020)
+DreamDate.create(date: 11052021, dream_id: 1)
 
-DreamType.create(dream_type: "weirdchamp")
+DreamType.create(dream_type: "weirdchamp", dream_id: 1)
