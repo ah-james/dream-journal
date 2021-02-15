@@ -1,0 +1,2 @@
+class DreamDatesController < ApplicationController
+end

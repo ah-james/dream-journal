@@ -1,0 +1,2 @@
+class DreamDate < ApplicationRecord
+end

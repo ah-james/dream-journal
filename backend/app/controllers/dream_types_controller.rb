@@ -1,0 +1,2 @@
+class DreamTypesController < ApplicationController
+end
