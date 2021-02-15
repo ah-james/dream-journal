@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Dream.create(title: "Maple Panic", description: "weird")
+
+DreamDate.create(date: 11/5/2020)
+
+DreamType.create(dream_type: "weirdchamp")
