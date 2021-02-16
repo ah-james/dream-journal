@@ -1,5 +1,5 @@
 class DreamDateSerializer
   include FastJsonapi::ObjectSerializer
   attributes :date
-  belongs_to :dream
+  has_many :dreams
 end

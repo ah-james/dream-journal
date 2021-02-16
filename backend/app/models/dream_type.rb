@@ -1,3 +1,3 @@
 class DreamType < ApplicationRecord
-    belongs_to :dream
+    has_many :dreams
 end
