@@ -1,15 +1,14 @@
 class DreamsController < ApplicationController
     def index
         dreams = Dream.all
-        options = {include: [:dream_types, :dream_dates]}
-        render json: DreamSerializer.new(dream, options)
+        # options = {include: [:dream_types, :dream_dates]}
+        render json: DreamSerializer.new(dreams)
     end
 
     def show
         dream = Dream.find_by(id: params[:id])
-        options = {include: [:dream_types, :dream_dates]}
         if dream
-            render json: DreamSerializer.new(dream, options)
+            render json: DreamSerializer.new(dream)
         else
             render json: { message: 'dream not found' }
         end
@@ -17,9 +16,8 @@ class DreamsController < ApplicationController
 
     def create
         dream = Dream.new(dream_params)
-        options = {include: [:dream_types, :dream_dates]}
         if dream.save
-            render json: DreamSerializer.new(dream, options)
+            render json: DreamSerializer.new(dream)
         else
             render json: {error: "dream didn't save"}
         end
@@ -28,11 +26,12 @@ class DreamsController < ApplicationController
     def destroy
         dream = Dream.find_by(id: params[:id])
         dream.destroy
-        render json: {'#{dream.title} has been deleted'}
+        render json: {message: 'dream has been deleted'}
     end
 
     private
 
     def dream_params
-        params.require(:dream).permit(:title, :description, :dream_type, :dream_date)
+        params.require(:dream).permit(:title, :description)
+    end
 end

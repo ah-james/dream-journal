@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 2021_02_15_195419) do
   create_table "dreams", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "dream_types_id"
-    t.integer "dream_dates_id"
+    t.integer "dream_type_id"
+    t.integer "dream_date_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dream_dates_id"], name: "index_dreams_on_dream_dates_id"
-    t.index ["dream_types_id"], name: "index_dreams_on_dream_types_id"
+    t.index ["dream_date_id"], name: "index_dreams_on_dream_date_id"
+    t.index ["dream_type_id"], name: "index_dreams_on_dream_type_id"
   end
 
-  add_foreign_key "dreams", "dream_dates", column: "dream_dates_id"
-  add_foreign_key "dreams", "dream_types", column: "dream_types_id"
+  add_foreign_key "dreams", "dream_dates"
+  add_foreign_key "dreams", "dream_types"
 end
