@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_195419) do
+ActiveRecord::Schema.define(version: 2021_02_17_154429) do
 
-  create_table "dream_dates", force: :cascade do |t|
-    t.string "date"
+  create_table "categories", force: :cascade do |t|
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "dream_types", force: :cascade do |t|
-    t.string "dream_type"
+  create_table "dates", force: :cascade do |t|
+    t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,14 +27,10 @@ ActiveRecord::Schema.define(version: 2021_02_15_195419) do
   create_table "dreams", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "dream_type_id"
-    t.integer "dream_date_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["dream_date_id"], name: "index_dreams_on_dream_date_id"
-    t.index ["dream_type_id"], name: "index_dreams_on_dream_type_id"
+    t.integer "date_id"
+    t.integer "category_id"
   end
 
-  add_foreign_key "dreams", "dream_dates"
-  add_foreign_key "dreams", "dream_types"
 end
