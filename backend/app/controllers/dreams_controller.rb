@@ -1,7 +1,6 @@
 class DreamsController < ApplicationController
     def index
         dreams = Dream.all
-        # options = {include: [:dream_types, :dream_dates]}
         render json: DreamSerializer.new(dreams)
     end
 

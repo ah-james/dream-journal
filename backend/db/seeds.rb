@@ -13,11 +13,11 @@ Dream.create(title: "Bonnaroo", description: "My band was headlining Bonnaroo", 
 Dream.create(title: "Falling Dream", description: "Dream where I'm falling but I wake up before I hit the ground", date_id: 5, category_id: 5)
 
 
-Date.create(date: "11-05-2020")
-Date.create(date: "04-07-2009")
-Date.create(date: "12-31-2019")
-Date.create(date: "03-15-2016")
-Date.create(date: "08-22-2004")
+# Date.create(date: "11-05-2020")
+# Date.create(date: "04-07-2009")
+# Date.create(date: "12-31-2019")
+# Date.create(date: "03-15-2016")
+# Date.create(date: "08-22-2004")
 
 
 Category.create(category: "Nightmare")
