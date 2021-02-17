@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_154429) do
+ActiveRecord::Schema.define(version: 2021_02_17_173402) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_154429) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "dates", force: :cascade do |t|
+  create_table "dream_dates", force: :cascade do |t|
     t.string "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_02_17_154429) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "date_id"
+    t.integer "dream_date_id"
     t.integer "category_id"
   end
 
