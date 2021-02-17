@@ -6,7 +6,7 @@ class DreamApi {
     getDreams() {
         fetch(this.baseUrl)
         .then(resp => resp.json())
-        .then(addDreamsToDom)
+        .then(data => {debugger})
     }
 
     addDreamsToDom(data) {
