@@ -10,7 +10,6 @@ class DreamApi {
         .then(json => {
             json["data"].forEach(element => {
                 const i = new Dream({id: element.id, ...element.attributes})
-                // debugger
                 i.attachToDom()
             })
         })
@@ -35,7 +34,26 @@ class DreamApi {
         fetch(this.baseUrl, configObj)
         .then(resp => resp.json())
         .then(json => {
-            debugger
+            const i = new Dream({id: json.data.id, ...json.data.attributes})
+            i.attachToDom()
         })
     }
+
+    deleteDream = (id) => {
+        const configObj = {
+            method: "Delete",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }
+        fetch(`${this.baseUrl}/${id}`, configObj)
+        .then(resp => resp.json())
+        .then(json =>{})
+    }
+
+    editDream = (id) => {
+        const configObj = 
+    }
+
 }
