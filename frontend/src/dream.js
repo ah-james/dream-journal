@@ -1,6 +1,7 @@
 class Dream {
 
     static all = []
+    static container = document.getElementById("dreams-container")
 
     constructor({id, title, description, dream_date_id, category_id}) {
         // setting item properties
@@ -20,11 +21,14 @@ class Dream {
 
     render() {
         // add later -- HTML for added element
+        this.element.innerHTML = `
+        <p>${this.title}</p>
+        `
         return this.element
     }
 
     attachToDom() {
+        this.render()
         Dream.container.appendChild(this.element)
     }
-
 }

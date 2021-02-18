@@ -6,10 +6,12 @@ class DreamApi {
     getDreams() {
         fetch(this.baseUrl)
         .then(resp => resp.json())
-        .then(data => {debugger})
-    }
-
-    addDreamsToDom(data) {
-        debugger
+        .then(json => {
+            json["data"].forEach(element => {
+                const i = new Dream({id: element.id, ...element.attributes})
+                // debugger
+                i.attachToDom()
+            })
+        })
     }
 }
