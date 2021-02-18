@@ -53,7 +53,18 @@ class DreamApi {
     }
 
     editDream = (id) => {
-        const configObj = 
+        const item = 
+        const configObj = {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+            body: JSON.stringify(item)
+        }
+        fetch(`${this.baseUrl}/${id}`, configObj)
+        .then(resp => resp.json())
+        .then(json => {id.render})
     }
 
 }
