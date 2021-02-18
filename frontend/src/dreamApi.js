@@ -1,4 +1,5 @@
 class DreamApi {
+
     constructor(port) {
         this.baseUrl = `${port}/dreams`
     }
@@ -12,6 +13,29 @@ class DreamApi {
                 // debugger
                 i.attachToDom()
             })
+        })
+    }
+
+    addDream() {
+        const newDream = {
+            title: dreamTitle.value,
+            description: dreamDesc.value,
+            dream_date: dreamDate.value,
+            category: dreamType.value
+        }
+
+        const configObj = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(newDream)
+        }
+        fetch(this.baseUrl, configObj)
+        .then(resp => resp.json())
+        .then(json => {
+            debugger
         })
     }
 }

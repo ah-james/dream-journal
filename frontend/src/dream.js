@@ -22,7 +22,7 @@ class Dream {
     render() {
         // add later -- HTML for added element
         this.element.innerHTML = `
-        <p>${this.title}</p>
+        <p>${this.title} <strong>${this.description}</strong></p>
         `
         return this.element
     }
