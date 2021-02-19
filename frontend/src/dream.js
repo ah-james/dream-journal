@@ -33,10 +33,9 @@ class Dream {
         }        
     }
 
-    saveDream = (saveButton) => {
-        const li = saveButton.parentElement
-        const newTitle = li.querySelector(".edit-title")
-        const newDesc = li.querySelector(".edit-description")
+    saveDream = () => {
+        this.title = this.element.querySelector(".edit-title").value
+        this.description = this.element.querySelector(".edit-description").value
         
         dreamApi.editDream(this)
     }
