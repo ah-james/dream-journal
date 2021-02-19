@@ -7,6 +7,7 @@ const dreamTitle = document.getElementById('title')
 const dreamDate = document.getElementById('date')
 const dreamDesc = document.getElementById('description')
 const dreamType = document.getElementById('type')
+const dreamDropdown = document.getElementById('create-dropdown')
 const submit = document.getElementById('submit')
 
 submit.addEventListener("click", submitForm) // event listener on submit button

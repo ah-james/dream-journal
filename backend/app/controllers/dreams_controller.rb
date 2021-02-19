@@ -15,7 +15,7 @@ class DreamsController < ApplicationController
 
     def create
         dream = Dream.new(dream_params)
-        dream.category = Category.last # change later 
+        # dream.category = Category.last # change later 
         dream.dream_date = DreamDate.last # change later 
         if dream.save
             render json: DreamSerializer.new(dream)
@@ -42,6 +42,6 @@ class DreamsController < ApplicationController
     private
 
     def dream_params
-        params.require(:dream).permit(:title, :description)
+        params.require(:dream).permit(:title, :description, :category_id)
     end
 end

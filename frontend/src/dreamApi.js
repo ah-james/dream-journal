@@ -20,7 +20,7 @@ class DreamApi {
             title: dreamTitle.value,
             description: dreamDesc.value,
             dream_date: dreamDate.value,
-            category: dreamType.value
+            category_id: dreamDropdown.value
         }
 
         const configObj = {
