@@ -7,7 +7,18 @@
     <h1>Hello Yes This is My Dream Journal Thanks</h1>
 
     <h3>Filter by Type of Dream</h3>
-    <div id="dream-types"></div>
+    <select name="type" id="dream-category-sort">
+        <option value="nightmare">Nightmare</option>
+        <option value="funny">Funny</option>
+        <option value="realistic">Realistic</option>
+        <option value="weird">Weird</option>
+        <option value="recurring">Recurring</option>
+        <option value="ideal-ife">Ideal Life</option>
+        <option value="embarrassing">Embarrassing</option>
+    </select>
+
+    <h3>Filter by Date of Dream</h3>
+    <select name="date" id="dream-date-sort"></select>
 
     <h3>Add a Dream</h3>
     <form class="dream-form">
@@ -25,7 +36,15 @@
         </div>
         <div class="dream-form">
             <label for="type">What Kind of Dream Was It? </label>
-            <input type="text" name="type" id="type" placeholder="Dream Type?">
+            <select name="type" id="dream-select">
+                <option value="nightmare">Nightmare</option>
+                <option value="funny">Funny</option>
+                <option value="realistic">Realistic</option>
+                <option value="weird">Weird</option>
+                <option value="recurring">Recurring</option>
+                <option value="ideal-ife">Ideal Life</option>
+                <option value="embarrassing">Embarrassing</option>
+            </select>
         </div>
         <button id="submit">Submit</button>
     </form>
