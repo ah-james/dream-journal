@@ -9,8 +9,9 @@ class CategoryApi {
         .then(resp => resp.json())
         .then(json => {
             json["data"].forEach(element => {
-                const i = new Dream({id: element.id, ...element.attributes})
-                i.addToDropdowns()
+                const i = new Category({id: element.id, ...element.attributes})
+                i.addToFilterDropdown()
+                i.addToCreateDropdown()
             })
         })
     }

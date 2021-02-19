@@ -55,7 +55,6 @@ class Dream {
     }
 
     render() {
-        // add later -- HTML for added element
         this.element.innerHTML = `
         <div>
             <p class="title">${this.title}</p>

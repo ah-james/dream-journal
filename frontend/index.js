@@ -1,6 +1,7 @@
 // get all of the elements
 const port = 'http://localhost:3000'
 const dreamApi = new DreamApi(port)
+const categoryApi = new CategoryApi(port)
 const dreamList = document.getElementById('dreams-container')
 const dreamTitle = document.getElementById('title')
 const dreamDate = document.getElementById('date')
@@ -16,3 +17,4 @@ function submitForm(event) {
 }
 
 dreamApi.getDreams()
+categoryApi.getCategories()
