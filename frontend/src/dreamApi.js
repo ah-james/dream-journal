@@ -19,7 +19,7 @@ class DreamApi {
         const newDream = {
             title: dreamTitle.value,
             description: dreamDesc.value,
-            dream_date: dreamDate.value,
+            // dream_date_id: dreamDate.value,
             category_id: dreamDropdown.value
         }
 

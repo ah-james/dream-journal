@@ -57,7 +57,7 @@ class Dream {
     render() {
         this.element.innerHTML = `
         <div>
-            <p class="title">${this.title}</p>
+            <p class="title">${this.title} -- ${this.dreamDateId}</p>
             <p class="description">${this.description}</p>
         </div>
         <button class="edit" data-id="${this.id}">Edit</button>

@@ -16,6 +16,7 @@ submit.addEventListener("click", submitForm) // event listener on submit button
 function submitForm(event) {
     event.preventDefault()
     dreamApi.addDream()
+    dreamDateApi.addDreamDate()
 }
 
 dreamApi.getDreams()
