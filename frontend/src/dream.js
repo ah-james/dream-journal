@@ -30,7 +30,13 @@ class Dream {
         } else if (element.target.innerText === "Save") {
             element.target.innerText = "Edit"
             this.saveDream(element.target)
-        }        
+        } else if (element.target.innerText === "Favorite") {
+            this.favoriteDream(element.target)
+            element.target.innerText = "Unfavorite"
+        } else if (element.target.innerText === "Unfavorite") {
+            this.unfavoriteDream(element.target)
+            element.target.innerText = "Favorite"  
+        }    
     }
 
     saveDream = () => {
@@ -56,6 +62,18 @@ class Dream {
         dreamApi.deleteDream(this.id)
     }
 
+    favoriteDream = (favoriteButton) => {
+        const li = favoriteButton.parentElement
+        const favoriteDreams = document.getElementById('favorite-dreams')
+        favoriteDreams.append(li)
+    }
+
+    unfavoriteDream = (unfavoriteButton) => {
+        const li = unfavoriteButton.parentElement
+        const dreams = document.getElementById('dreams-container')
+        dreams.append(li)
+    }
+
     addDateToDropdown() {
         const dateFilterDropdown = document.getElementById('date-filter-dropdown')
         const option = document.createElement('option')
@@ -73,6 +91,7 @@ class Dream {
         </div>
         <button class="edit" data-id="${this.id}">Edit</button>
         <button class="delete" data-id="${this.id}">Delete</button>
+        <button class="favorite" data-id="${this.id}">Favorite</button>
         `
         return this.element
     }
@@ -81,4 +100,6 @@ class Dream {
         this.render()
         Dream.container.prepend(this.element)
     }
+
+    
 }
