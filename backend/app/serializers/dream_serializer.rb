@@ -1,6 +1,5 @@
 class DreamSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :title, :description, :dream_date_id, :category_id
-  belongs_to :dream_date
+  attributes :title, :description, :category_id
   belongs_to :category
 end

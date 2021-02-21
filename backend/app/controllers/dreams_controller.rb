@@ -16,9 +16,8 @@ class DreamsController < ApplicationController
     def create
         dream = Dream.new(dream_params)
         # dream.category = Category.last # change later 
-        dream.dream_date = DreamDate.last # change later 
         if dream.save
-            render json: DreamSerializer.new(dream)
+            render json: DreamSerializer.new(dream, include: [:category])
         else
             render json: {error: "dream didn't save"}
         end
@@ -27,7 +26,7 @@ class DreamsController < ApplicationController
     def update
         dream = Dream.find_by(id: params[:id])
         if dream.update(dream_params)
-            render json: DreamSerializer.new(dream)
+            render json: DreamSerializer.new(dream, include: [:category])
         else
             render json: {error: "dream didn't save"}
         end
@@ -42,6 +41,6 @@ class DreamsController < ApplicationController
     private
 
     def dream_params
-        params.require(:dream).permit(:title, :description, :category_id)
+        params.require(:dream).permit(:title, :description, :date, :category_id)
     end
 end
