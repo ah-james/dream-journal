@@ -12,6 +12,7 @@ class Dream {
         this.categoryId = category_id
 
         this.element = document.createElement('li')
+        this.element.className = this.categoryId
         this.element.dataset["id"] = id
         this.element.id = `dream-${id}`
 
