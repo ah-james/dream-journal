@@ -3,12 +3,12 @@ class Dream {
     static all = []
     static container = document.getElementById("dreams-container")
 
-    constructor({id, title, description, dream_date_id, category_id}) {
+    constructor({id, title, description, date, category_id}) {
         // setting item properties
         this.id = id
         this.title = title
         this.description = description
-        this.dreamDateId = dream_date_id
+        this.date = date
         this.categoryId = category_id
 
         this.element = document.createElement('li')
@@ -57,7 +57,8 @@ class Dream {
     render() {
         this.element.innerHTML = `
         <div>
-            <p class="title">${this.title} -- ${this.dreamDateId}</p>
+            <p class="date">${this.date}</p>
+            <p class="title">${this.title}</p>
             <p class="description">${this.description}</p>
         </div>
         <button class="edit" data-id="${this.id}">Edit</button>
@@ -68,6 +69,6 @@ class Dream {
 
     attachToDom() {
         this.render()
-        Dream.container.appendChild(this.element)
+        Dream.container.prepend(this.element)
     }
 }

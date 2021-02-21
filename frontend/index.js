@@ -2,7 +2,6 @@
 const port = 'http://localhost:3000'
 const dreamApi = new DreamApi(port)
 const categoryApi = new CategoryApi(port)
-const dreamDateApi = new DreamDateApi(port)
 const dreamList = document.getElementById('dreams-container')
 const dreamTitle = document.getElementById('title')
 const dreamDate = document.getElementById('date')
@@ -10,15 +9,16 @@ const dreamDesc = document.getElementById('description')
 const dreamType = document.getElementById('type')
 const dreamDropdown = document.getElementById('create-dropdown')
 const submit = document.getElementById('submit')
+const reset = document.getElementById('reset')
 
 submit.addEventListener("click", submitForm) // event listener on submit button
+
+// reset.addEventListener("click", resetFilter)
 
 function submitForm(event) {
     event.preventDefault()
     dreamApi.addDream()
-    dreamDateApi.addDreamDate()
 }
 
 dreamApi.getDreams()
 categoryApi.getCategories()
-dreamDateApi.getDreamDates()
