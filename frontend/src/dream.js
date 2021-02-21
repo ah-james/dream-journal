@@ -36,6 +36,7 @@ class Dream {
     saveDream = () => {
         this.title = this.element.querySelector(".edit-title").value
         this.description = this.element.querySelector(".edit-description").value
+        this.date = this.element.querySelector(".edit-date").value
         
         dreamApi.editDream(this)
     }
@@ -44,14 +45,23 @@ class Dream {
         const li = editButton.parentElement
         const div = editButton.parentElement.querySelector('div')
         div.innerHTML = `
-        <input type="text" class="edit-title" placeholder="${div.children[0].innerText}"></input>
-        <input type="text" class="edit-description" placeholder="${div.children[1].innerText}"></input>
+        <input type="text" class="edit-date" placeholder="${div.children[0].innerText}"></input>
+        <input type="text" class="edit-title" placeholder="${div.children[1].innerText}"></input>
+        <input type="text" class="edit-description" placeholder="${div.children[2].innerText}"></input>
         `
     }
 
     deleteDream = (element) => {
         element.target.parentElement.remove()
         dreamApi.deleteDream(this.id)
+    }
+
+    addDateToDropdown() {
+        const dateFilterDropdown = document.getElementById('date-filter-dropdown')
+        const option = document.createElement('option')
+        option.value = this.id
+        option.innerText = this.date
+        dateFilterDropdown.append(option)
     }
 
     render() {
