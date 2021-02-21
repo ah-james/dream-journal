@@ -4,36 +4,41 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Hello Yes This is My Dream Journal Thanks</h1>
+    <h1>Your Dream Journal</h1>
 
-    <h3>Filter by Type of Dream</h3>
-    <select name="type" class="dropdown" id="filter-dropdown">
-        <option value="0"></option>
-    </select>
+    <div class="filter">
+        <h3>Filter by Type of Dream</h3>
+        <select name="type" class="dropdown" id="filter-dropdown">
+            <option></option>
+        </select>
+            <!-- <h3>Filter by Date of Dream</h3>
+        <select name="date" id="date-filter-dropdown">
+            <option></option>
+        </select> -->
+        <br>
+        <button id="filter">Filter</button>
+        <button id="reset">Reset Filter</button>
+    </div><br>
 
-    <h3>Filter by Date of Dream</h3>
-    <select name="date" id="date-filter-dropdown">
-        <option value="0"></option>
-    </select>
-<br>
-    <button id="filter">Filter</button>
-    <button id="reset">Reset Filter</button>
+
+ 
 
     <h3>Add a Dream</h3>
         <form id="dream-form">
-            <div class="title-input">
+            <div class="title-input dream-form">
                 <label for="title">Dream Title:</label>
                 <input type="text" name="title" id="title" placeholder="Dream Title">
             </div>
-            <div class="description-input">
-                <label for="description">Enter the Description of Your Dream:</label>
-                <input type="text" name="description" id="description" placeholder="Dream Description">
+            <label for="description">Enter the Description of Your Dream:</label>
+
+            <div class="description-input dream-form">
+                <textarea rows="10" cols="25" type="text" name="description" id="description" placeholder="Dream Description"></textarea>
             </div>
-            <div class="date-input">       
+            <div class="date-input dream-form">       
                 <label for="date">Enter the Date of Your Dream (MM-DD-YYYY):</label> 
                 <input type="text" name="date" id="date" placeholder="Dream Date">
             </div>
-            <div class="type-input">
+            <div class="type-input dream-form">
                 <label for="type">What Kind of Dream Was It? </label>
                 <select name="type" class="dropdown" id="create-dropdown">
                 </select>
@@ -41,14 +46,13 @@
             <button id="submit">Submit</button>
         </form>
 
-    
-    <h3>Dream List</h3>
-    <div>
+    <div class='all-dreams'>
+        <h3>Dream List</h3>
         <ul id="dreams-container"></ul>
     </div>
 
-    <h3>Favorite Dreams</h3>
-    <div>
+    <div class='favorite-dreams'>
+        <h3>Favorite Dreams</h3>
         <ul id="favorite-dreams"></ul>
     </div>
 

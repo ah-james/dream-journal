@@ -54,7 +54,7 @@ class Dream {
         div.innerHTML = `
         <input type="text" class="edit-date" placeholder="${div.children[0].innerText}"></input>
         <input type="text" class="edit-title" placeholder="${div.children[1].innerText}"></input>
-        <input type="text" class="edit-description" placeholder="${div.children[2].innerText}"></input>
+        <textarea rows="10" cols="25" class="edit-description" placeholder="${div.children[2].innerText}"></textarea>
         `
     }
 

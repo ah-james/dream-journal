@@ -15,8 +15,6 @@ const filter = document.getElementById('filter')
 
 submit.addEventListener("click", submitForm) // event listener on submit button
 
-// reset.addEventListener("click", resetFilter)
-
 function submitForm(event) {
     event.preventDefault()
     dreamApi.addDream()
@@ -29,6 +27,8 @@ reset.addEventListener('click', resetFilter)
 function filterDreams() {
     const category = document.getElementById('filter-dropdown').value
     const ul = document.getElementById('dreams-container').children
+    // const p = document.getElementsByClassName('date')
+
     // iterate over ul children
     for(const child of ul) {
         // if category filter value === li's class

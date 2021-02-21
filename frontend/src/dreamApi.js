@@ -11,7 +11,7 @@ class DreamApi {
             json["data"].forEach(element => {
                 const i = new Dream({id: element.id, ...element.attributes})
                 i.attachToDom()
-                i.addDateToDropdown()
+                // i.addDateToDropdown()
             })
         })
     }
@@ -38,7 +38,7 @@ class DreamApi {
         .then(json => {
             const i = new Dream({id: json.data.id, ...json.data.attributes})
             i.attachToDom()
-            i.addDateToDropdown()
+            // i.addDateToDropdown()
         })
     }
 
