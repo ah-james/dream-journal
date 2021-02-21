@@ -23,3 +23,14 @@ form#dream-form {
 div.dream-form {
     margin-bottom: 10px;
 }
+
+
+.floater {
+    height: 100%;
+    width: 800px;
+    display: inline-block;
+}
+
+.all-dreams-container {
+    white-space: nowrap;
+}
