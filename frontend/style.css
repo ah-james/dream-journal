@@ -18,13 +18,15 @@ input#description {
 
 form#dream-form {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 div.dream-form {
     margin-bottom: 10px;
+    text-align: center;
 }
 
-
+/* 
 .floater {
     height: 100%;
     width: 800px;
@@ -33,4 +35,4 @@ div.dream-form {
 
 .all-dreams-container {
     white-space: nowrap;
-}
+} */
