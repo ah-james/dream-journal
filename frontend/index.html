@@ -30,7 +30,7 @@
         <form id="dream-form">
             <div class="title-input dream-form">
                 <label for="title">Dream Title:</label>
-                <input type="text" name="title" id="title" placeholder="Dream Title">
+                <input type="text" name="title" id="title" placeholder="Dream Title" required />
             </div>
             <label for="description">Enter the Description of Your Dream:</label>
 
@@ -39,12 +39,11 @@
             </div>
             <div class="date-input dream-form">       
                 <label for="date">Enter the Date of Your Dream (MM-DD-YYYY):</label> 
-                <input type="text" name="date" id="date" placeholder="Dream Date">
+                <input type="text" name="date" id="date" placeholder="Dream Date" required />
             </div>
             <div class="type-input dream-form">
                 <label for="type">What Kind of Dream Was It? </label>
-                <select name="type" class="dropdown" id="create-dropdown">
-                </select>
+                <select name="type" class="dropdown" id="create-dropdown"></select>
             </div>
             <button id="submit">Submit</button>
         </form>

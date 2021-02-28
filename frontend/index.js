@@ -14,7 +14,7 @@ const filter = document.getElementById('filter')
 const modeSwitch = document.getElementsByClassName('mode-switcher')[0]
 const titleSort = document.getElementById('title-sort')
 
-submit.addEventListener("click", submitForm) // event listener on submit button
+submit.addEventListener("submit", submitForm) // event listener on submit button
 filter.addEventListener('click', filterDreams)
 reset.addEventListener('click', resetFilter)
 modeSwitch.addEventListener('click', changeColors)
@@ -30,7 +30,7 @@ function sortByTitle() {
             return 0
         }
     })
-    
+
     for (let i = 0; i < sortedDreams.length; i++) {
         sortedDreams[i].attachToDom()
     }

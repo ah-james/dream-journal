@@ -30,6 +30,14 @@ div.dream-form {
     text-align: center;
 }
 
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
 /* 
 .floater {
     height: 100%;
