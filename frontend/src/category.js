@@ -1,8 +1,12 @@
 class Category {
+
+    static all = []
     
     constructor({id, category}) {
         this.id = id
         this.category = category
+
+        Category.all.push(this)
     }
 
     addToFilterDropdown() {
