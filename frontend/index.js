@@ -12,17 +12,35 @@ const submit = document.getElementById('submit')
 const reset = document.getElementById('reset')
 const filter = document.getElementById('filter')
 const modeSwitch = document.getElementsByClassName('mode-switcher')[0]
+const titleSort = document.getElementById('title-sort')
 
 submit.addEventListener("click", submitForm) // event listener on submit button
+filter.addEventListener('click', filterDreams)
+reset.addEventListener('click', resetFilter)
+modeSwitch.addEventListener('click', changeColors)
+titleSort.addEventListener('click', sortByTitle)
+
+function sortByTitle() {
+    const sortedDreams = Dream.all.sort(function (a,b) {
+        if (a.title < b.title) {
+            return -1
+        } else if (a.title > b.title) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+    
+    for (let i = 0; i < sortedDreams.length; i++) {
+        sortedDreams[i].attachToDom()
+    }
+}
 
 function submitForm(event) {
     event.preventDefault()
     dreamApi.addDream()
     form.reset()
 }
-
-filter.addEventListener('click', filterDreams)
-reset.addEventListener('click', resetFilter)
 
 function filterDreams() {
     const category = document.getElementById('filter-dropdown').value
@@ -47,8 +65,6 @@ function resetFilter() {
         child.style.display = "block"
     }
 }
-
-modeSwitch.addEventListener('click', changeColors)
 
 function changeColors(element) {
     if (element.target.innerText === "Change to Dark Mode") {
