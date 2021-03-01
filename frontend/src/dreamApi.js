@@ -56,7 +56,6 @@ class DreamApi {
     }
 
     editDream = (dream) => {
-        let {title, description, date} = dream
         const dreamInfo = {
             title,
             description,

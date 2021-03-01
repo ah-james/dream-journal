@@ -75,13 +75,13 @@ class Dream {
         dreams.append(li)
     }
 
-    addDateToDropdown() {
-        const dateFilterDropdown = document.getElementById('date-filter-dropdown')
-        const option = document.createElement('option')
-        option.value = this.id
-        option.innerText = this.date
-        dateFilterDropdown.append(option)
-    }
+    // addDateToDropdown() {
+    //     const dateFilterDropdown = document.getElementById('date-filter-dropdown')
+    //     const option = document.createElement('option')
+    //     option.value = this.id
+    //     option.innerText = this.date
+    //     dateFilterDropdown.append(option)
+    // }
 
     render() {
         this.element.innerHTML = `

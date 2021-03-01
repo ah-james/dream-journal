@@ -15,7 +15,6 @@ class DreamsController < ApplicationController
 
     def create
         dream = Dream.new(dream_params)
-        # dream.category = Category.last # change later 
         if dream.save
             render json: DreamSerializer.new(dream, include: [:category])
         else
