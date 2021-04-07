@@ -13,12 +13,31 @@ const reset = document.getElementById('reset')
 const filter = document.getElementById('filter')
 const modeSwitch = document.getElementsByClassName('mode-switcher')[0]
 const titleSort = document.getElementById('title-sort')
+const dateSort = document.getElementById('date-sort')
 
-submit.addEventListener("submit", submitForm) // event listener on submit button
+submit.addEventListener("click", submitForm) // event listener on submit button
 filter.addEventListener('click', filterDreams)
 reset.addEventListener('click', resetFilter)
 modeSwitch.addEventListener('click', changeColors)
 titleSort.addEventListener('click', sortByTitle)
+dateSort.addEventListener('click', sortByDate)
+
+function sortByDate() {
+    const sortedDreams = Dream.all.sort(function (a,b) {
+        return new Date(b.date) - new Date(a.date);
+        // if (new Date(b.date) - new Date(a.date)) {
+        //     return -1
+        // } else if (new Date(b.date) - new Date(a.date)) {
+        //     return 1
+        // } else {
+        //     return 0
+        // }
+    })
+
+    for (let i = 0; i < sortedDreams.length; i++) {
+        sortedDreams[i].attachToDom()
+    }
+}
 
 function sortByTitle() {
     const sortedDreams = Dream.all.sort(function (a,b) {
@@ -37,6 +56,7 @@ function sortByTitle() {
 }
 
 function submitForm(event) {
+    // console.log("submitted added dream")
     event.preventDefault()
     dreamApi.addDream()
     form.reset()
