@@ -85,14 +85,17 @@ class Dream {
 
     render() {
         this.element.innerHTML = `
-        <div>
-            <p class="date">${this.date}</p>
-            <p class="title">${this.title}</p>
-            <p class="description">${this.description}</p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">${this.title}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${this.date}</h6>                
+                <p class="card-text">${this.description}</p>
+                <button class="edit" data-id="${this.id}">Edit</button>
+                <button class="delete" data-id="${this.id}">Delete</button>
+                <button class="favorite" data-id="${this.id}">Favorite</button>
+            </div>
         </div>
-        <button class="edit" data-id="${this.id}">Edit</button>
-        <button class="delete" data-id="${this.id}">Delete</button>
-        <button class="favorite" data-id="${this.id}">Favorite</button>
+
         `
         return this.element
     }
