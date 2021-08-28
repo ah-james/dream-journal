@@ -90,12 +90,11 @@ class Dream {
                 <h5 class="card-title">${this.title}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${this.date}</h6>                
                 <p class="card-text">${this.description}</p>
-                <button class="edit" data-id="${this.id}">Edit</button>
-                <button class="delete" data-id="${this.id}">Delete</button>
-                <button class="favorite" data-id="${this.id}">Favorite</button>
+                <button  class="btn btn-outline-dark" data-id="${this.id}">Favorite</button>
+                <button class="btn btn-outline-secondary" data-id="${this.id}">Edit</button>
+                <button class="btn btn-outline-danger" data-id="${this.id}">Delete</button>
             </div>
         </div>
-
         `
         return this.element
     }
