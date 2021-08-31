@@ -5,27 +5,43 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Your Dream Journal</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Dream Journal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+              <button class="mode-switcher">Change to Dark Mode</button>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Link</a> -->
+              <button id="title-sort">Sort by Title</button>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link disabled" href="#">Disabled</a> -->
+              <button id="date-sort">Sort by Date</button>
+            </li>
+          </ul>
+          <!-- <a class="navbar-brand" href="#">Filter</a>
+          <form class="form-inline my-2 my-lg-0">
+            <select name="type" class="dropdown" id="filter-dropdown">
+                <option></option>
+            </select>
+            <button id="filter">Filter</button>
+            <button id="reset">Reset Filter</button>
+          </form> -->
+        </div>
+      </nav>
 
-    <button class="mode-switcher">Change to Dark Mode</button>
-    <button id="title-sort">Sort by Title</button>
-    <button id="date-sort">Sort by Date</button>
+    <!-- <h1>Your Dream Journal</h1> -->
 
-    <div class="filter">
-        <h3>Filter by Type of Dream</h3>
-        <select name="type" class="dropdown" id="filter-dropdown">
-            <option></option>
-        </select>
-            <!-- <h3>Filter by Date of Dream</h3>
-        <select name="date" id="date-filter-dropdown">
-            <option></option>
-        </select> -->
-        <br>
-        <button id="filter">Filter</button>
-        <button id="reset">Reset Filter</button>
-    </div><br>
-
-
+    <!-- <button class="mode-switcher">Change to Dark Mode</button> -->
+    <!-- <button id="title-sort">Sort by Title</button> -->
+    <!-- <button id="date-sort">Sort by Date</button> -->
  
     <div class="dream-form">
         <h3>Add a Dream</h3>
@@ -51,10 +67,26 @@
         </form>
     </div>
 
+    <div class="filter">
+        <h3>Filter by Type of Dream</h3>
+        <select name="type" class="dropdown" id="filter-dropdown">
+            <option></option>
+        </select>
+            <!-- <h3>Filter by Date of Dream</h3>
+        <select name="date" id="date-filter-dropdown">
+            <option></option>
+        </select>
+        <br> -->
+        <button id="filter">Filter</button>
+        <button id="reset">Reset Filter</button>
+    </div><br>
+
+
+
     <div class="all-dreams-container">
         <div class="floater">
             <h3>Dream List</h3>
-            <ul id="dreams-container"></ul>
+            <ul class="row" id="dreams-container"></ul>
         </div>
         <div id="favorites" class='floater'>
             <h3>Favorite Dreams</h3>
