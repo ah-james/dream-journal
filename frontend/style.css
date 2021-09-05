@@ -4,6 +4,10 @@ div.card {
 }
 
 p.card-text {
+    width: 250px;
+}
+
+p.card-text {
     overflow-wrap: break-word;
 }
 
