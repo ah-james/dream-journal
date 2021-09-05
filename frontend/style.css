@@ -1,5 +1,10 @@
 div.card {
     margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+p.card-text {
+    overflow-wrap: break-word;
 }
 
 select#filter-dropdown {

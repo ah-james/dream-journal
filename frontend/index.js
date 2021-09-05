@@ -15,7 +15,7 @@ const modeSwitch = document.getElementsByClassName('mode-switcher')[0]
 const titleSort = document.getElementById('title-sort')
 const dateSort = document.getElementById('date-sort')
 
-submit.addEventListener("click", submitForm) // event listener on submit button
+submit.addEventListener('submit', submitForm) // event listener on submit button
 filter.addEventListener('click', filterDreams)
 reset.addEventListener('click', resetFilter)
 modeSwitch.addEventListener('click', changeColors)
@@ -56,7 +56,7 @@ function sortByTitle() {
 }
 
 function submitForm(event) {
-    // console.log("submitted added dream")
+    console.log("submitted added dream")
     event.preventDefault()
     dreamApi.addDream()
     form.reset()

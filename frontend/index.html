@@ -45,15 +45,15 @@
  
     <div class="dream-form">
         <h3>Add a Dream</h3>
-        <form id="dream-form">
+        <form id="dream-form" class="title-input dream-form">
             <div class="title-input dream-form">
-                <label for="title">Dream Title:</label>
+                <label for="title" class="form-label">Dream Title:</label>
                 <input type="text" name="title" id="title" placeholder="Dream Title" required />
             </div>
-            <label for="description">Enter the Description of Your Dream:</label>
-
             <div class="description-input dream-form">
-                <textarea rows="5" cols="25" type="text" name="description" id="description" placeholder="Dream Description"></textarea>
+                <label for="description" class="form-label">Enter the Description of Your Dream:</label>
+                <br>
+                <textarea rows="5" cols="25" type="text" class="form-label" name="description" id="description" placeholder="Dream Description"></textarea>
             </div>
             <div class="date-input dream-form">       
                 <label for="date">Enter the Date of Your Dream (MM-DD-YYYY):</label> 
@@ -63,7 +63,7 @@
                 <label for="type">What Kind of Dream Was It? </label>
                 <select name="type" class="dropdown" id="create-dropdown"></select>
             </div>
-            <button id="submit">Submit</button>
+            <button id='submit' type="submit">Submit</button>
         </form>
     </div>
 
