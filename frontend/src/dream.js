@@ -49,7 +49,6 @@ class Dream {
 
     editForm = (editButton) => {
         console.log('edit form')
-        const li = editButton.parentElement
         const div = editButton.parentElement
         div.innerHTML = `
         <div class="col">
@@ -81,14 +80,6 @@ class Dream {
         dreams.append(li)
     }
 
-    // addDateToDropdown() {
-    //     const dateFilterDropdown = document.getElementById('date-filter-dropdown')
-    //     const option = document.createElement('option')
-    //     option.value = this.id
-    //     option.innerText = this.date
-    //     dateFilterDropdown.append(option)
-    // }
-
     render() {
         this.element.innerHTML = `
         <div class="card">
@@ -110,6 +101,4 @@ class Dream {
         this.render()
         Dream.container.prepend(this.element)
     }
-
-    
 }
