@@ -52,10 +52,15 @@ class Dream {
         const li = editButton.parentElement
         const div = editButton.parentElement
         div.innerHTML = `
-        <input type="text" class="edit-title" placeholder="${div.children[1].innerText}"></input>
-        <input type="text" class="edit-date" placeholder="${div.children[0].innerText}"></input>
-        <textarea rows="10" cols="25" class="edit-description" placeholder="${div.children[2].innerText}"></textarea>
-        <button class="btn btn-outline-secondary" data-id="${this.id}">Save</button>
+        <div class="col">
+            <input type="text" class="edit-title" value="${div.children[1].innerText}"></input>
+            <br><br>
+            <input type="text" class="edit-date" value="${div.children[0].innerText}"></input>
+            <br><br>
+            <textarea rows="5" cols="25" class="edit-description">${div.children[2].innerText}</textarea>
+            <br><br>
+            <button class="btn btn-outline-secondary" data-id="${this.id}">Save</button>
+        </div>
         `
     }
 
