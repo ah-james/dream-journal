@@ -48,12 +48,14 @@ class Dream {
     }
 
     editForm = (editButton) => {
+        console.log('edit form')
         const li = editButton.parentElement
-        const div = editButton.parentElement.querySelector('div')
+        const div = editButton.parentElement
         div.innerHTML = `
-        <input type="text" class="edit-date" placeholder="${div.children[0].innerText}"></input>
         <input type="text" class="edit-title" placeholder="${div.children[1].innerText}"></input>
+        <input type="text" class="edit-date" placeholder="${div.children[0].innerText}"></input>
         <textarea rows="10" cols="25" class="edit-description" placeholder="${div.children[2].innerText}"></textarea>
+        <button class="btn btn-outline-secondary" data-id="${this.id}">Save</button>
         `
     }
 
@@ -90,10 +92,11 @@ class Dream {
                 <h6 class="card-subtitle mb-2 text-muted">${this.date}</h6>                
                 <p class="card-text">${this.description}</p>
                 <button class="btn btn-outline-danger" data-id="${this.id}">Delete</button>
+                <button class="btn btn-outline-secondary" data-id="${this.id}">Edit</button>
             </div>
         </div>
         `
-        // <button class="btn btn-outline-secondary" data-id="${this.id}">Edit</button>
+        
         // <button  class="btn btn-outline-dark" data-id="${this.id}">Favorite</button>
         return this.element
     }
