@@ -70,11 +70,13 @@ class Dream {
 
     favoriteDream = (favoriteButton) => {
         const li = favoriteButton.parentElement
+        const card = li.parentElement
         const favoriteDreams = document.getElementById('favorite-dreams')
-        favoriteDreams.append(li)
+        favoriteDreams.append(card)
     }
 
     unfavoriteDream = (unfavoriteButton) => {
+        console.log('unfavorited')
         const li = unfavoriteButton.parentElement
         const dreams = document.getElementById('dreams-container')
         dreams.append(li)
@@ -89,11 +91,12 @@ class Dream {
                 <p class="card-text">${this.description}</p>
                 <button class="btn btn-outline-danger" data-id="${this.id}">Delete</button>
                 <button class="btn btn-outline-secondary" data-id="${this.id}">Edit</button>
+                <button  class="btn btn-outline-dark" data-id="${this.id}">Favorite</button>
+
             </div>
         </div>
         `
         
-        // <button  class="btn btn-outline-dark" data-id="${this.id}">Favorite</button>
         return this.element
     }
 
