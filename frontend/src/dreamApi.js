@@ -22,7 +22,8 @@ class DreamApi {
                 title: dreamTitle.value,
                 description: dreamDesc.value,
                 date: dreamDate.value,
-                category_id: dreamDropdown.value
+                category_id: dreamDropdown.value,
+                favorite: false
             }
         }
         const configObj = {

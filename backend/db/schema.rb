@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_012814) do
+ActiveRecord::Schema.define(version: 2021_09_14_202622) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_02_21_012814) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id"
     t.string "date"
+    t.boolean "favorite"
   end
 
 end
