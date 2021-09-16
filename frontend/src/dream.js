@@ -52,9 +52,9 @@ class Dream {
         const div = editButton.parentElement
         div.innerHTML = `
         <div class="col">
-            <input type="text" class="edit-title" value="${div.children[1].innerText}"></input>
+            <input type="text" class="edit-title" value="${div.children[0].innerText}"></input>
             <br><br>
-            <input type="text" class="edit-date" value="${div.children[0].innerText}"></input>
+            <input type="text" class="edit-date" value="${div.children[1].innerText}"></input>
             <br><br>
             <textarea rows="5" cols="25" class="edit-description">${div.children[2].innerText}</textarea>
             <br><br>
@@ -73,6 +73,7 @@ class Dream {
         const card = li.parentElement
         const favoriteDreams = document.getElementById('favorite-dreams')
         favoriteDreams.append(card)
+        // edit dream to have favorite set to true
     }
 
     unfavoriteDream = (unfavoriteButton) => {
